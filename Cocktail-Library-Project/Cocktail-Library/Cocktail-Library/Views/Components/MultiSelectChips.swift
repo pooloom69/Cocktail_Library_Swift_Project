@@ -12,20 +12,22 @@ struct MultiSelectChips: View {
     @Binding var selection: Set<String>
     
     var body: some View {
-        FlowLayout(items: options, spacing: 4) { option in
-            Button(action: {
-                if selection.contains(option) {
-                    selection.remove(option)
-                } else {
-                    selection.insert(option)
+        HStack(spacing: 8) {
+            ForEach(options, id: \.self) { option in
+                Button(action: {
+                    if selection.contains(option) {
+                        selection.remove(option)
+                    } else {
+                        selection.insert(option)
+                    }
+                }) {
+                    Text(option)
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 6)
+                        .background(selection.contains(option) ? Color.orange : Color.gray.opacity(0.2))
+                        .foregroundColor(selection.contains(option) ? .white : .black)
+                        .cornerRadius(12)
                 }
-            }) {
-                Text(option)
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 4)
-                    .background(selection.contains(option) ? Color.orange : Color.gray.opacity(0.2))
-                    .foregroundColor(selection.contains(option) ? .white : .black)
-                    .cornerRadius(12)
             }
         }
     }
