@@ -117,13 +117,6 @@ struct HomeView: View {
 }
 
 // MARK: - Models
-struct Ingredient: Codable, Identifiable {
-    let id = UUID()
-    let name: String
-    let amount: Double
-    let unit: String
-}
-
 struct Recipe: Codable, Identifiable {
     let id: String
     let name: String
@@ -163,3 +156,10 @@ struct SearchBar: View {
         .padding(.horizontal)
     }
 }
+
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+    }
+}
+

@@ -7,13 +7,21 @@
 
 import SwiftUI
 
+
 struct CreateNew: View {
     @State private var recipeName = ""
     @State private var selectedBase = "Gin"
     @State private var selectedStyle = "Classic"
     @State private var selectedFlavors: Set<String> = []
-    @State private var selectedIngredients: [String] = []
     @State private var instructions = ""
+    
+    
+    @State private var recipeIngredients: [Ingredient] = [
+        Ingredient(amount: "", unit: "oz", name: "")
+    ]
+    
+    let units = ["oz", "ml", "dash", "slice", "bar spoon"]
+    let ingredientsList = ["Lime", "Sugar", "Mint", "Soda", "Triple Sec", "Bitters"]
     
     let bases = ["Gin", "Vodka", "Rum", "Whiskey", "Tequila", "Brandy", "Mezcal", "Sake", "Soju"]
     let styles = ["Classic","Spritz", "Highball", "Martini", "Old Fashioned", "Tiki"]
@@ -106,88 +114,96 @@ struct CreateNew: View {
                     .frame(height: 60)
                     
                     //  Ingredients
-                    Text("Ingredients")
-                        .font(.headline)
-                        .padding(.horizontal)
-                        .padding()
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(ingredients, id: \.self) { ing in
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Ingredients")
+                            .font(.headline)
+                            .padding(.horizontal)
+                        
+                        ForEach($recipeIngredients) { $ingredient in
+                            HStack {
+                                // Ingredient name (first)
+                                HStack {
+                                    // Ingredient name (text field)
+                                    TextField("Ingredient", text: $ingredient.name)
+                                        .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                                    // Quick pick menu
+                                    Menu {
+                                        ForEach(ingredientsList, id: \.self) { ing in
+                                            Button(ing) { ingredient.name = ing }
+                                        }
+                                    } label: {
+                                        Image(systemName: "chevron.down.circle")
+                                            .foregroundColor(.blue)
+                                    }
+                                }
+
+                                // Amount (second)
+                                TextField("Amount", text: $ingredient.amount)
+                                    .keyboardType(.decimalPad)
+                                    .frame(width: 90)
+                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                                // Unit picker (third)
+                                Picker("Unit", selection: $ingredient.unit) {
+                                    ForEach(units, id: \.self) { unit in
+                                        Text(unit).tag(unit)
+                                    }
+                                }
+                                .pickerStyle(.menu)
+                                .frame(width: 80)
+
+                                // Delete button (-)
                                 Button(action: {
-                                    if selectedIngredients.contains(ing) {
-                                        // If the ingredient is already selected → remove it
-                                        selectedIngredients.removeAll { $0 == ing }
-                                    } else {
-                                        // If it's a new ingredient → add it
-                                        selectedIngredients.append(ing)
+                                    if let index = recipeIngredients.firstIndex(where: { $0.id == ingredient.id }) {
+                                        recipeIngredients.remove(at: index)
                                     }
                                 }) {
-                                    Text(ing)
-                                        .padding(.horizontal, 12)
-                                        .padding(.vertical, 6)
-                                    // Change background color depending on selection state
-                                        .background(selectedIngredients.contains(ing) ? Color.blue : Color.blue.opacity(0.2))
-                                        .foregroundColor(.white)
-                                        .cornerRadius(8)
+                                    Image(systemName: "minus.circle.fill")
+                                        .foregroundColor(.gray)
                                 }
-                                
                             }
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
+
                         
-                    }
-                    
-                    // Chosen ingredients
-                    if !selectedIngredients.isEmpty {
-                        VStack(alignment: .leading) {
-                            Text("Selected Ingredients:")
-                            ForEach(selectedIngredients, id: \.self) { ing in
-                                Text("• \(ing)")
-                            }
+                        // Add new ingredient row
+                        Button(action: {
+                            recipeIngredients.append(Ingredient(amount: "", unit: "oz", name: ""))
+                        }) {
+                            Label("Add Ingredient", systemImage: "plus")
+                                .padding(.horizontal)
                         }
-                        .padding(.horizontal)
                     }
                     
-                    //  Instructions
-                    Text("Instructions")
-                        .font(.headline)
-                        .padding(.horizontal)
+                    // etc.. temperature, abv level, carbonation, steps, glass, garnish 
+                    
+                }
+                
+                
+                
+                Button(action: {
+                    print("Recipe saved: \(recipeName)")
+                    // Add your save logic here
+                }) {
+                    Text("Save Recipe")
+                        .frame(maxWidth: .infinity)
                         .padding()
-                    TextEditor(text: $instructions)
-                        .frame(height: 120)
-                        .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray.opacity(0.4)))
+                        .background(Color.orange)
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
                         .padding(.horizontal)
-                    
-                    //  Optional fields (expand later)
-                    Text("Optional Fields (Glass, Garnish, Carbonation, Temperature...)")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
-                        .padding(.horizontal)
-                    
-                    Spacer()
                 }
             }
-            Button(action: {
-                print("Recipe saved: \(recipeName)")
-                // Add your save logic here
-            }) {
-                Text("Save Recipe")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.orange)
-                    .foregroundColor(.white)
-                    .cornerRadius(12)
-                    .padding(.horizontal)
-            }
+            .navigationTitle("Create Recipe")
         }
-        .navigationTitle("Create Recipe")
     }
+    
 }
-
-
-
-struct CreateNew_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateNew()
+    
+    struct CreateNew_Previews: PreviewProvider {
+        static var previews: some View {
+            CreateNew()
+        }
     }
-}
+
