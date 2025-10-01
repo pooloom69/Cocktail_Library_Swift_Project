@@ -116,18 +116,6 @@ struct HomeView: View {
     }
 }
 
-// MARK: - Models
-struct Recipe: Codable, Identifiable {
-    let id: String
-    let name: String
-    let base: String
-    let style: String
-    let flavors: [String]
-    let ingredients: [Ingredient]
-    let glass: String
-    let garnish: [String]
-    let abv: Double
-}
 
 // MARK: - JSON Loader
 func loadRecipes() -> [Recipe] {
