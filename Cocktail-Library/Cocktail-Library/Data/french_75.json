@@ -1,0 +1,49 @@
+{
+  "id": "french_75_classic",
+  "name": "French 75",
+  "base": "Gin",
+  "style": "Fizz",
+  "flavor": ["sweet","sour","boozy","effervescent"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [0.0, 0.5, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.45, 0.0, 0.05],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [0.0, 0.0, 0.5, 0.0, 1.0,
+               0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.3, 0.4, 0.0, 0.0, 0.0, 0.4, 0.2, 0.0, 0.0, 0.0, 0.0, 0.8],
+    "version": 1
+  },
+  "abv": 0.16,
+  "ice": "Shake base with ice, top with sparkling",
+  "ingredients": [
+    { "name": "Gin", "amount": 1.0, "unit": "oz" },
+    { "name": "Fresh lemon juice", "amount": 0.5, "unit": "oz" },
+    { "name": "Simple syrup", "amount": 0.5, "unit": "oz" },
+    { "name": "Champagne", "amount": 3.0, "unit": "oz" }
+  ],
+  "steps": [
+    "Shake gin, lemon, and syrup with ice.",
+    "Strain into a flute and top with Champagne.",
+    "Garnish before serving."
+  ],
+  "glass": "Flute",
+  "garnish": ["Lemon twist"]
+}

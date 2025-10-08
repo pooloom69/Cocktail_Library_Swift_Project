@@ -1,0 +1,53 @@
+{
+  "id": "long_island_classic",
+  "name": "Long Island Iced Tea",
+  "base": "Mixed Spirits",
+  "style": "Highball",
+  "flavor": ["sweet","sour","boozy","fruity","effervescent"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [0.25, 0.2, 0.2, 0.2, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0, 0.15],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [0.5, 0.5, 1.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.6, 0.4, 0.1, 0.0, 0.0, 0.9, 0.3, 0.1, 0.0, 0.0, 0.0, 0.3],
+    "version": 1
+  },
+  "abv": 0.22,
+  "ice": "Build over ice in glass",
+  "ingredients": [
+    { "name": "Vodka", "amount": 0.5, "unit": "oz" },
+    { "name": "Gin", "amount": 0.5, "unit": "oz" },
+    { "name": "Rum", "amount": 0.5, "unit": "oz" },
+    { "name": "Tequila", "amount": 0.5, "unit": "oz" },
+    { "name": "Triple Sec", "amount": 0.5, "unit": "oz" },
+    { "name": "Lemon juice", "amount": 0.75, "unit": "oz" },
+    { "name": "Simple syrup", "amount": 0.5, "unit": "oz" },
+    { "name": "Cola", "amount": 2.0, "unit": "oz" }
+  ],
+  "steps": [
+    "Build spirits, lemon juice, and syrup over ice in a tall glass.",
+    "Top with cola.",
+    "Stir gently and garnish."
+  ],
+  "glass": "Highball glass",
+  "garnish": ["Lemon wedge"]
+}

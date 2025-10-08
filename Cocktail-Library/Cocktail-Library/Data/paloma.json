@@ -1,0 +1,50 @@
+{
+  "id": "paloma_classic",
+  "name": "Paloma",
+  "base": "Tequila",
+  "style": "Highball",
+  "flavor": ["sweet","sour","salty","boozy","fruity","effervescent"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [0.0, 0.0, 0.0, 1.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [0.0, 0.4, 1.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.4, 0.5, 0.1, 0.2, 0.0, 0.5, 0.6, 0.0, 0.0, 0.0, 0.0, 0.6],
+    "version": 1
+  },
+  "abv": 0.12,
+  "ice": "Build over ice in glass",
+  "ingredients": [
+    { "name": "Tequila", "amount": 2.0, "unit": "oz" },
+    { "name": "Fresh grapefruit juice", "amount": 2.0, "unit": "oz" },
+    { "name": "Fresh lime juice", "amount": 0.5, "unit": "oz" },
+    { "name": "Club soda", "amount": 2.0, "unit": "oz" },
+    { "name": "Salt", "amount": 1.0, "unit": "rim (optional)" }
+  ],
+  "steps": [
+    "Build tequila and juices in a glass over ice.",
+    "Top with soda water.",
+    "Garnish before serving."
+  ],
+  "glass": "Highball glass",
+  "garnish": ["Grapefruit wedge"]
+}

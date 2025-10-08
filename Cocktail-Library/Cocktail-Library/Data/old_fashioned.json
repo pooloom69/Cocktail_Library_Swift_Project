@@ -1,0 +1,48 @@
+{
+  "id": "old_fashioned_classic",
+  "name": "Old Fashioned",
+  "base": "Whiskey",
+  "style": "Spirit-Forward",
+  "flavor": ["sweet","bitter","boozy"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [0.0, 0.0, 0.0, 0.0, 0.0, 1.0,
+               0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [1.0, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.3, 0.0, 0.4, 0.0, 0.0, 0.9, 0.2, 0.2, 0.0, 0.1, 0.0, 0.0],
+    "version": 1
+  },
+  "abv": 0.32,
+  "ice": "Build over large ice cube",
+  "ingredients": [
+    { "name": "Bourbon or rye whiskey", "amount": 2.0, "unit": "oz" },
+    { "name": "Simple syrup", "amount": 0.25, "unit": "oz" },
+    { "name": "Angostura bitters", "amount": 2.0, "unit": "dashes" }
+  ],
+  "steps": [
+    "Add whiskey, syrup, and bitters to a glass with a large ice cube.",
+    "Stir gently until chilled.",
+    "Garnish before serving."
+  ],
+  "glass": "Old fashioned glass",
+  "garnish": ["Orange peel","Cherry (optional)"]
+}

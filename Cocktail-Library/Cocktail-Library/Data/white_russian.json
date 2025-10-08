@@ -1,0 +1,49 @@
+{
+  "id": "white_russian_classic",
+  "name": "White Russian",
+  "base": "Vodka",
+  "style": "Dessert/After-Dinner",
+  "flavor": ["sweet","boozy","creamy"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [0.8, 0.0, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.2, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [0.2, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0,
+               1.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.6, 0.0, 0.0, 0.0, 0.0, 0.5, 0.1, 0.0, 0.0, 0.0, 0.9, 0.0],
+    "version": 1
+  },
+  "abv": 0.20,
+  "ice": "Build over ice in glass",
+  "ingredients": [
+    { "name": "Vodka", "amount": 2.0, "unit": "oz" },
+    { "name": "Coffee liqueur", "amount": 1.0, "unit": "oz" },
+    { "name": "Heavy cream", "amount": 1.0, "unit": "oz" }
+  ],
+  "steps": [
+    "Build vodka and coffee liqueur over ice.",
+    "Float cream on top and stir gently.",
+    "Garnish before serving."
+  ],
+  "glass": "Old fashioned glass",
+  "garnish": ["None or grated nutmeg"]
+}
+

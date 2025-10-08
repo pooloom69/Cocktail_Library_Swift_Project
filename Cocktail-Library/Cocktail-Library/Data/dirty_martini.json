@@ -1,0 +1,49 @@
+{
+  "id": "dirty_martini_classic",
+  "name": "Dirty Martini",
+  "base": "Gin",
+  "style": "Spirit-Forward",
+  "flavor": ["salty","boozy","herbal"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [0.0, 0.6, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.35, 0.0, 0.0, 0.05],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [1.0, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.0, 0.0, 0.1, 0.3, 0.0, 0.8, 0.0, 0.2, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "abv": 0.28,
+  "ice": "Stir with ice, strain",
+  "ingredients": [
+    { "name": "Gin", "amount": 2.5, "unit": "oz" },
+    { "name": "Dry vermouth", "amount": 0.5, "unit": "oz" },
+    { "name": "Olive brine", "amount": 0.5, "unit": "oz" }
+  ],
+  "steps": [
+    "Stir gin, vermouth, and olive brine with ice until very cold.",
+    "Strain into a chilled cocktail glass.",
+    "Garnish before serving."
+  ],
+  "glass": "Cocktail (martini) glass",
+  "garnish": ["Olives"]
+}
+

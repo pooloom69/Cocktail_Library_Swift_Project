@@ -1,0 +1,49 @@
+{
+  "id": "pina_colada_classic",
+  "name": "Piña Colada",
+  "base": "Rum",
+  "style": "Frozen/Blended",
+  "flavor": ["sweet","fruity","creamy"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [0.0, 0.0, 1.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [0.0, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.4, 0.0, 0.0,
+               0.4, 0.0, 0.0, 1.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.8, 0.2, 0.0, 0.0, 0.0, 0.3, 0.9, 0.0, 0.0, 0.0, 0.9, 0.0],
+    "version": 1
+  },
+  "abv": 0.13,
+  "ice": "Blend with crushed ice",
+  "ingredients": [
+    { "name": "White rum", "amount": 2.0, "unit": "oz" },
+    { "name": "Pineapple juice", "amount": 3.0, "unit": "oz" },
+    { "name": "Coconut cream", "amount": 1.0, "unit": "oz" }
+  ],
+  "steps": [
+    "Blend all ingredients with crushed ice until smooth.",
+    "Pour into a tall glass.",
+    "Garnish before serving."
+  ],
+  "glass": "Hurricane glass",
+  "garnish": ["Pineapple wedge","Cherry"]
+}
+

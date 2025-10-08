@@ -1,0 +1,48 @@
+{
+  "id": "negroni_classic",
+  "name": "Negroni",
+  "base": "Gin",
+  "style": "Spirit-Forward",
+  "flavor": ["bitter","boozy","fruity","herbal"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [0.0, 0.6, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.2, 0.2, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [1.0, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.3, 0.0, 0.8, 0.0, 0.0, 0.7, 0.4, 0.6, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "abv": 0.24,
+  "ice": "Stir with ice, strain over fresh ice",
+  "ingredients": [
+    { "name": "Gin", "amount": 1.0, "unit": "oz" },
+    { "name": "Campari", "amount": 1.0, "unit": "oz" },
+    { "name": "Sweet vermouth", "amount": 1.0, "unit": "oz" }
+  ],
+  "steps": [
+    "Stir all ingredients with ice.",
+    "Strain into a rocks glass with ice.",
+    "Garnish before serving."
+  ],
+  "glass": "Old fashioned glass",
+  "garnish": ["Orange peel"]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "clover_club_classic",
+  "name": "Clover Club",
+  "base": "Gin",
+  "style": "Sour",
+  "flavor": ["sweet","sour","fruity","herbal","creamy"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [0.0, 1.0, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [0.0, 1.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.6, 0.4, 0.0, 0.0, 0.0, 0.35, 0.6, 0.2, 0.0, 0.0, 0.1, 0.0],
+    "version": 1
+  },
+  "abv": 0.18,
+  "ice": "Shake with ice, strain",
+  "ingredients": [
+    { "name": "Gin", "amount": 2.0, "unit": "oz" },
+    { "name": "Raspberry syrup", "amount": 0.5, "unit": "oz" },
+    { "name": "Fresh lemon juice", "amount": 0.75, "unit": "oz" },
+    { "name": "Egg white", "amount": 1.0, "unit": "small egg white" }
+  ],
+  "steps": [
+    "Dry shake all ingredients without ice.",
+    "Add ice and shake again until chilled.",
+    "Strain into a chilled coupe.",
+    "Garnish before serving."
+  ],
+  "glass": "Coupe",
+  "garnish": ["Raspberry"]
+}

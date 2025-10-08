@@ -1,0 +1,54 @@
+{
+  "id": "singapore_sling_classic",
+  "name": "Singapore Sling",
+  "base": "Gin",
+  "style": "Tiki/Exotic",
+  "flavor": ["sweet","sour","boozy","fruity","herbal","spicy","effervescent"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [0.0, 0.7, 0.0, 0.0, 0.0, 0.0,
+               0.1, 0.2, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [0.2, 0.4, 0.4, 0.0, 0.0,
+               0.0, 1.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.5, 0.4, 0.1, 0.0, 0.0, 0.6, 0.7, 0.4, 0.3, 0.0, 0.0, 0.5],
+    "version": 1
+  },
+  "abv": 0.16,
+  "ice": "Shake with ice, strain over fresh ice",
+  "ingredients": [
+    { "name": "Gin", "amount": 1.5, "unit": "oz" },
+    { "name": "Cherry liqueur", "amount": 0.75, "unit": "oz" },
+    { "name": "Cointreau", "amount": 0.25, "unit": "oz" },
+    { "name": "Benedictine", "amount": 0.25, "unit": "oz" },
+    { "name": "Pineapple juice", "amount": 2.5, "unit": "oz" },
+    { "name": "Lime juice", "amount": 0.5, "unit": "oz" },
+    { "name": "Grenadine", "amount": 0.25, "unit": "oz" },
+    { "name": "Angostura bitters", "amount": 1.0, "unit": "dash" }
+  ],
+  "steps": [
+    "Shake all ingredients with ice.",
+    "Strain into a tall glass over fresh ice.",
+    "Top with a splash of soda.",
+    "Garnish before serving."
+  ],
+  "glass": "Highball glass",
+  "garnish": ["Pineapple slice","Cherry"]
+}

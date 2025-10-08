@@ -1,0 +1,49 @@
+{
+  "id": "moscow_mule_classic",
+  "name": "Moscow Mule",
+  "base": "Vodka",
+  "style": "Highball",
+  "flavor": ["sweet","sour","boozy","fruity","spicy","effervescent"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [0.0, 0.4, 1.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.4, 0.5, 0.0, 0.0, 0.0, 0.4, 0.5, 0.0, 0.7, 0.0, 0.0, 0.6],
+    "version": 1
+  },
+  "abv": 0.15,
+  "ice": "Build over ice in copper mug",
+  "ingredients": [
+    { "name": "Vodka", "amount": 2.0, "unit": "oz" },
+    { "name": "Fresh lime juice", "amount": 0.5, "unit": "oz" },
+    { "name": "Ginger beer", "amount": 4.0, "unit": "oz" }
+  ],
+  "steps": [
+    "Fill a copper mug with ice.",
+    "Add vodka and lime juice.",
+    "Top with ginger beer and stir.",
+    "Garnish before serving."
+  ],
+  "glass": "Copper mug",
+  "garnish": ["Lime wedge","Mint sprig"]
+}

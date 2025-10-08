@@ -1,0 +1,49 @@
+{
+  "id": "manhattan_classic",
+  "name": "Manhattan",
+  "base": "Whiskey",
+  "style": "Spirit-Forward",
+  "flavor": ["bitter","boozy","herbal"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [0.0, 0.0, 0.0, 0.0, 0.0, 0.8,
+               0.0, 0.0, 0.2, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [1.0, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.2, 0.0, 0.5, 0.0, 0.0, 0.8, 0.2, 0.3, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "abv": 0.28,
+  "ice": "Stir with ice, strain",
+  "ingredients": [
+    { "name": "Rye whiskey", "amount": 2.0, "unit": "oz" },
+    { "name": "Sweet vermouth", "amount": 1.0, "unit": "oz" },
+    { "name": "Angostura bitters", "amount": 2.0, "unit": "dashes" }
+  ],
+  "steps": [
+    "Stir whiskey, vermouth, and bitters with ice.",
+    "Strain into a chilled coupe.",
+    "Garnish before serving."
+  ],
+  "glass": "Coupe",
+  "garnish": ["Luxardo cherry"]
+}
+

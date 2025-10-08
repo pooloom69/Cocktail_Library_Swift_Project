@@ -1,0 +1,49 @@
+{
+  "id": "lemon_drop_classic",
+  "name": "Lemon Drop Martini",
+  "base": "Vodka",
+  "style": "Sour",
+  "flavor": ["sweet","sour","boozy"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [0.0, 1.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.7, 0.6, 0.0, 0.0, 0.0, 0.4, 0.2, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "abv": 0.20,
+  "ice": "Shake with ice, strain",
+  "ingredients": [
+    { "name": "Vodka", "amount": 2.0, "unit": "oz" },
+    { "name": "Triple Sec", "amount": 0.5, "unit": "oz" },
+    { "name": "Fresh lemon juice", "amount": 0.75, "unit": "oz" },
+    { "name": "Simple syrup", "amount": 0.25, "unit": "oz" }
+  ],
+  "steps": [
+    "Shake all ingredients with ice.",
+    "Strain into a sugar-rimmed martini glass.",
+    "Garnish before serving."
+  ],
+  "glass": "Cocktail (martini) glass",
+  "garnish": ["Lemon twist"]
+}

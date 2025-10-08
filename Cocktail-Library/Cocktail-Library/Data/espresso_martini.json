@@ -1,0 +1,49 @@
+{
+  "id": "espresso_martini_classic",
+  "name": "Espresso Martini",
+  "base": "Vodka",
+  "style": "Dessert/After-Dinner",
+  "flavor": ["sweet","umami","boozy","creamy"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [0.7, 0.0, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.3, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [0.2, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0,
+               1.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.5, 0.0, 0.1, 0.0, 0.2, 0.6, 0.1, 0.0, 0.0, 0.0, 0.3, 0.0],
+    "version": 1
+  },
+  "abv": 0.20,
+  "ice": "Shake with ice, strain",
+  "ingredients": [
+    { "name": "Vodka", "amount": 2.0, "unit": "oz" },
+    { "name": "Coffee liqueur", "amount": 0.5, "unit": "oz" },
+    { "name": "Fresh espresso", "amount": 1.0, "unit": "oz" },
+    { "name": "Simple syrup", "amount": 0.25, "unit": "oz" }
+  ],
+  "steps": [
+    "Shake all ingredients hard with ice.",
+    "Strain into a chilled cocktail glass.",
+    "Garnish before serving."
+  ],
+  "glass": "Cocktail (martini) glass",
+  "garnish": ["3 coffee beans"]
+}

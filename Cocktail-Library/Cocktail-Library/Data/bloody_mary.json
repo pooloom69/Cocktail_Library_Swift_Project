@@ -1,0 +1,54 @@
+{
+  "id": "bloody_mary_classic",
+  "name": "Bloody Mary",
+  "base": "Vodka",
+  "style": "Highball",
+  "flavor": ["salty","umami","boozy","fruity","herbal","spicy"],
+  "base_vector": {
+    "scale": "0-1",
+    "order": ["vodka","gin","rum","tequila","mezcal","whiskey",
+              "brandy_cognac","aperitif_liqueur","vermouth_fortified",
+              "wine_sparkling","beer_cider","nonalcoholic_modifier"],
+    "vector": [1.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "style_vector": {
+    "scale": "0-1",
+    "order": ["spirit_forward","sour","highball","collins","fizz",
+              "smash_julep","tiki_exotic","flip_nogg","hot",
+              "dessert_after_dinner","punch_large_format",
+              "low_abv_aperitivo","frozen_blended","shot_layered"],
+    "vector": [0.0, 0.0, 1.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0,
+               0.0, 0.0, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "flavor_vector": {
+    "scale": "0-1",
+    "order": ["sweet","sour","bitter","salty","umami","boozy","fruity",
+              "herbal","spicy","smoky","creamy","effervescent"],
+    "vector": [0.2, 0.2, 0.0, 0.2, 0.5, 0.3, 0.2, 0.4, 0.6, 0.0, 0.0, 0.0],
+    "version": 1
+  },
+  "abv": 0.12,
+  "ice": "Build over ice in glass",
+  "ingredients": [
+    { "name": "Vodka", "amount": 2.0, "unit": "oz" },
+    { "name": "Tomato juice", "amount": 4.0, "unit": "oz" },
+    { "name": "Lemon juice", "amount": 0.5, "unit": "oz" },
+    { "name": "Worcestershire sauce", "amount": 2.0, "unit": "dashes" },
+    { "name": "Hot sauce", "amount": 2.0, "unit": "dashes" },
+    { "name": "Celery salt", "amount": 1.0, "unit": "pinch" }
+  ],
+  "steps": [
+    "Fill a tall glass with ice.",
+    "Add vodka, tomato juice, lemon juice, Worcestershire sauce, and hot sauce.",
+    "Season with celery salt.",
+    "Stir gently to combine.",
+    "Garnish before serving."
+  ],
+  "glass": "Highball glass",
+  "garnish": ["Celery stick","Lemon wedge"]
+}
+
